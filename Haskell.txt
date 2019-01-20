@@ -1,0 +1,21 @@
+duplicate x = [[a, a] | a <- x]
+Prelude> duplicate [3, 4, 5]
+[[3,3],[4,4],[5,5]]
+Prelude> duplicate ['A', 'B', 'C', 'D']
+["AA","BB","CC","DD"]
+
+
+
+this works too:
+list1 = [3, 4, 5]
+list2 = [3, 4, 5]
+zip list1 list2
+
+
+
+this kind of works too:
+Prelude> list
+[3,4,5]
+Prelude> duplicateList = concatMap (replicate 2)
+Prelude> duplicateList list
+[3,3,4,4,5,5]
